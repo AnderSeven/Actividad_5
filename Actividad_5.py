@@ -15,6 +15,7 @@ while True:
     print("2. Mostrar la lista de estudiantes")
     print("3. Buscar estudiante")
     print("4. Calcular el promedio de todos los estudiantes")
+    print("5. Salir")
     op = int(input("Elija una opcion: "))
     match   op:
         case 1:
@@ -31,4 +32,9 @@ while True:
             else:
                 print("No hay estudiantes registrados")
         case 3:
+
         case 4:
+        case 5:
+            print("Gracias por usar el sistema")
+        case _:
+            print("Opcion invalida")
