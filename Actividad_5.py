@@ -28,12 +28,13 @@ while True:
         case 2:
             if len(lista) > 0:
                 for i in lista:
-                    print(f"- {i}")
+                    print(f"- Nombre: {i.nombre}, Carnet: {i.carne}, Carrera: {i.carrera}, Nota final: {i.nota_final}")
             else:
                 print("No hay estudiantes registrados")
         case 3:
-
+            print("3")
         case 4:
+            print("4")
         case 5:
             print("Gracias por usar el sistema")
         case _:
