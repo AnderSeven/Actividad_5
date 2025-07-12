@@ -23,10 +23,7 @@ while True:
             carne = int(input("Ingrese el carnet: "))
             carrera = input("Ingrese la carrera: ")
             nota_final = float(input("Ingrese la nota final: "))
-            if nota_final > 0 and nota_final < 100:
-                estudiante = Estudiante(nombre, carne, carrera, nota_final)
-            else:
-                print("La nota es invalida")
+            estudiante = Estudiante(nombre, carne, carrera, nota_final)
             lista.append(estudiante)
         case 2:
             if len(lista) > 0:
