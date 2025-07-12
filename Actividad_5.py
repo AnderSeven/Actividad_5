@@ -19,6 +19,9 @@ while True:
             nombre = input("Ingrese el nombre del estudiante: ")
             carne = int(input("Ingrese el carnet: "))
             carrera = input("Ingrese la carrera: ")
+            nota_final = float(input("Ingrese la nota final: "))
+            estudiante = Estudiante(nombre, carne, carrera, nota_final)
+            lista.append(estudiante)
         case 2:
         case 3:
         case 4:
