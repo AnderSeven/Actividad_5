@@ -1,5 +1,4 @@
 from multiprocessing.queues import JoinableQueue
-
 lista = []
 class Estudiante:
     def __init__(self, nombre, carne, carrera, nota_final):
@@ -19,14 +18,19 @@ while True:
     op = int(input("Elija una opcion: "))
     match   op:
         case 1:
+            print("---Registro de estudiantes---")
             nombre = input("Ingrese el nombre del estudiante: ")
             carne = int(input("Ingrese el carnet: "))
             carrera = input("Ingrese la carrera: ")
             nota_final = float(input("Ingrese la nota final: "))
-            estudiante = Estudiante(nombre, carne, carrera, nota_final)
+            if nota_final > 0 and nota_final < 100:
+                estudiante = Estudiante(nombre, carne, carrera, nota_final)
+            else:
+                print("La nota es invalida")
             lista.append(estudiante)
         case 2:
             if len(lista) > 0:
+                print("---Lista de Estudiantes---")
                 for i in lista:
                     print(f"- Nombre: {i.nombre}, Carnet: {i.carne}, Carrera: {i.carrera}, Nota final: {i.nota_final}")
             else:
@@ -34,7 +38,7 @@ while True:
         case 3:
             print("3")
         case 4:
-            print("4")
+            print("---Promedio---")
         case 5:
             print("Gracias por usar el sistema")
         case _:
