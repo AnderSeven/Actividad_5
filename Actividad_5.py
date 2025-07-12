@@ -1,3 +1,5 @@
+from multiprocessing.queues import JoinableQueue
+
 lista = []
 class Estudiante:
     def __init__(self, nombre, carne, carrera, nota_final):
@@ -23,5 +25,10 @@ while True:
             estudiante = Estudiante(nombre, carne, carrera, nota_final)
             lista.append(estudiante)
         case 2:
+            if len(lista) > 0:
+                for i in lista:
+                    print(f"- {i}")
+            else:
+                print("No hay estudiantes registrados")
         case 3:
         case 4:
