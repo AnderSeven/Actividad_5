@@ -29,7 +29,6 @@ while True:
             if len(lista) > 0:
                 print("---Lista de Estudiantes---")
                 for i in lista:
-                    asdf
                     print(f"- Nombre: {i.nombre}, Carnet: {i.carne}, Carrera: {i.carrera}, Nota final: {i.nota_final}")
             else:
                 print("No hay estudiantes registrados")
