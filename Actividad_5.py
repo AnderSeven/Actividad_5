@@ -35,10 +35,14 @@ while True:
         case 3:
             if len(lista) > 0:
                 carnet_buscar = int(input("Ingrese el carnet: "))
+                encontrado = False
                 for i in lista:
                     if i.carne == carnet_buscar:
                         print(f"Nombre: {i.nombre}, Carnet: {i.carne}, Carrera: {i.carrera}, Nota final: {i.nota_final}")
+                        encontrado = True
                         break
+                if encontrado == False:
+                    print("No se encontro al estudiante")
             else:
                 print("No hay estudiantes registrados")
         case 4:
