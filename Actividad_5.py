@@ -33,7 +33,14 @@ while True:
             else:
                 print("No hay estudiantes registrados")
         case 3:
-            print("3")
+            if len(lista) > 0:
+                carnet_buscar = int(input("Ingrese el carnet: "))
+                for i in lista:
+                    if i.carne == carnet_buscar:
+                        print(f"Nombre: {i.nombre}, Carnet: {i.carne}, Carrera: {i.carrera}, Nota final: {i.nota_final}")
+                        break
+            else:
+                print("No hay estudiantes registrados")
         case 4:
             print("---Promedio---")
         case 5:
