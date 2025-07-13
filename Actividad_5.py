@@ -1,4 +1,3 @@
-from multiprocessing.queues import JoinableQueue
 lista = []
 class Estudiante:
     def __init__(self, nombre, carne, carrera, nota_final):
@@ -47,6 +46,14 @@ while True:
                 print("No hay estudiantes registrados")
         case 4:
             print("---Promedio---")
+            if len(lista) > 0:
+                suma = 0
+                for i in lista:
+                    suma += i.nota_final
+                promedio = suma / len(lista)
+                print(f"El promedio de notas es: {promedio}")
+            else:
+                print("No hay estudiantes registrados")
         case 5:
             print("Gracias por usar el sistema")
         case _:
